@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --color-vorian-orange: #f15a24;
+    --color-vorian-orange-dark: #d94716;
+    --color-vorian-teal: #007a75;
+    --color-vorian-teal-dark: #005c58;
+    --color-vorian-dark: #102f2d;
+    --color-vorian-light: #f7faf9;
+}

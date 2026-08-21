@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home4/vorianco/public_html/
+    - /bin/cp -R * $DEPLOYPATH

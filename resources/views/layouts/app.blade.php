@@ -15,7 +15,7 @@
         content="@yield('meta_description', 'Vorian Engineering provides professional engineering solutions and technical services in Nigeria.')"
     >
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite('resources/css/app.css')
 </head>
 
 <body class="bg-white text-gray-900 antialiased">

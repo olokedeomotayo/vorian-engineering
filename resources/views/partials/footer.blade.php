@@ -10,7 +10,7 @@
 
                 <a href="/" class="inline-block">
                     <img
-                        src="{{ asset('images/vorian-logo.jpeg') }}"
+                        src="{{ asset('images/VORIAN-Logo.jpeg') }}"
                         alt="Vorian Engineering"
                         class="h-20 w-auto rounded bg-white p-2 object-contain"
                     >

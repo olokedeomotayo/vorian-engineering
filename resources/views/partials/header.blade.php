@@ -5,7 +5,7 @@
         {{-- Logo --}}
         <a href="/" class="flex items-center">
             <img
-                src="{{ asset('images/vorian-logo.jpeg') }}"
+                src="{{ asset('images/VORIAN-Logo.jpeg') }}"
                 alt="Vorian Engineering"
                 class="h-16 w-auto object-contain"
             >

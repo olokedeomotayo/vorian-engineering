@@ -2,6 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home4/vorianco/public_html/
+
     - /bin/cp -R app $DEPLOYPATH
     - /bin/cp -R bootstrap $DEPLOYPATH
     - /bin/cp -R config $DEPLOYPATH
@@ -10,11 +11,21 @@ deployment:
     - /bin/cp -R routes $DEPLOYPATH
     - /bin/cp -R vendor $DEPLOYPATH
     - /bin/cp -R storage $DEPLOYPATH
+
     - /bin/cp artisan $DEPLOYPATH
     - /bin/cp composer.json $DEPLOYPATH
     - /bin/cp composer.lock $DEPLOYPATH
+
+    # Copy Laravel public files
     - /bin/cp public/index.php $DEPLOYPATH
     - /bin/cp public/.htaccess $DEPLOYPATH
     - /bin/cp public/favicon.ico $DEPLOYPATH
     - /bin/cp public/robots.txt $DEPLOYPATH
+
+    # Copy website assets
     - /bin/cp -R public/images $DEPLOYPATH
+    - /bin/cp -R public/build $DEPLOYPATH
+
+    # Fix Laravel paths for public_html deployment
+    - /usr/bin/sed -i "s#__DIR__.'/../vendor/autoload.php'#__DIR__.'/vendor/autoload.php'#g" $DEPLOYPATH/index.php
+    - /usr/bin/sed -i "s#__DIR__.'/../bootstrap/app.php'#__DIR__.'/bootstrap/app.php'#g" $DEPLOYPATH/index.php
